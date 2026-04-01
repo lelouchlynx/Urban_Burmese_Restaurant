@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Urban Burmese RESTAURANT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="Urban Burmese" class="nav-logo-img"> Urban Burmese Restaurant
+            </a>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="services.html#reserve" class="nav-reserve-btn">Reserve a Table</a></li>
+                <li><button class="theme-toggle" id="themeToggle">☀️</button></li>
+                <li><span id="navAuthArea"><button class="nav-profile-btn" id="navProfileBtn"
+                            aria-label="Account">👤</button></span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Our Story & Team</h1>
+            <p class="page-subtitle">Learn about our passion for Burmese cuisine and the students behind this project.
+            </p>
+        </div>
+    </header>
+
+    <!-- STORY SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <h2 style="font-family: 'Playfair Display'; margin-bottom:20px;">Tradition Meets Modernity</h2>
+                <p style="color: var(--text-secondary);">
+                    Urban Burmese Restaurant (UBR) brings the fragrant streets of Yangon to your table.
+                    We specialize in Mohinga, Tea Leaf Salad, and rich curries, prepared with authentic ingredients and
+                    a modern twist.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEAM SECTION -->
+    <section class="section" style="background: var(--bg-surface);">
+        <div class="container">
+            <h2 class="text-center" style="font-family: 'Playfair Display';">Meet the Team</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar"><img src="../images/Rowan.jpg" alt="Rowan" class="team-avatar-img"></div>
+                    <h3>Rowan</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Web Designer</p>
+                    <p style="font-size:0.85rem; margin-top:10px;">Designed the Home and About pages.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><img src="../images/Sai.jpg" alt="Sai" class="team-avatar-img"></div>
+                    <h3>Sai</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Developer</p>
+                    <p style="font-size:0.85rem; margin-top:10px;">Led full-stack development and system integration.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><img src="../images/Sunny.jpg" alt="Sunny" class="team-avatar-img"></div>
+                    <h3>Sunny</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Project Manager</p>
+                    <p style="font-size:0.85rem; margin-top:10px;">Coordinated the team and managed the project.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><img src="../images/Yolanda.jpg" alt="Yolanda" class="team-avatar-img">
+                    </div>
+                    <h3>Yolanda</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">Content Lead</p>
+                    <p style="font-size:0.85rem; margin-top:10px;">Worked on Menu and Services.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar"><img src="../images/ming.jpg" alt="Ming" class="team-avatar-img"></div>
+                    <h3>Ming</h3>
+                    <p style="color:var(--text-secondary); font-size:0.9rem;">QA Tester</p>
+                    <p style="font-size:0.85rem; margin-top:10px;">Ensured responsiveness and form validation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Urban Burmese Restaurant. Project by The Urban.</p>
+        </div>
+    </footer>
+
+    <!-- PROFILE MODAL -->
+    <div class="ubr-modal-overlay" id="profileModalOverlay">
+        <div class="ubr-modal" id="profileModal">
+            <button class="ubr-modal-close">✕</button>
+            <div class="ubr-modal-header">
+                <h2>My Account</h2>
+            </div>
+            <div class="ubr-modal-body">
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="login">Login</button>
+                    <button class="profile-tab" data-tab="register">Register</button>
+                    <button class="profile-tab" data-tab="profile" style="display:none;">My Profile</button>
+                    <button class="profile-tab" data-tab="addresses" style="display:none;">📍 Addresses</button>
+                    <button class="profile-tab" data-tab="reservations" style="display:none;">🪑 Reservations</button>
+                    <button class="profile-tab" data-tab="orders" style="display:none;">🛒 Orders</button>
+                </div>
+                <div class="profile-pane active" id="pane-login">
+                    <form class="profile-form" id="loginForm">
+                        <div class="form-group"><label for="loginEmail">Email</label><input type="email" id="loginEmail"
+                                placeholder="your@email.com" required></div>
+                        <div class="form-group"><label for="loginPassword">Password</label><input type="password"
+                                id="loginPassword" placeholder="••••••" required></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+                        <p class="profile-msg" id="loginMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-register">
+                    <form class="profile-form" id="registerForm">
+                        <div class="form-group"><label for="regName">Full Name</label><input type="text" id="regName"
+                                placeholder="John Doe" required></div>
+                        <div class="form-group"><label for="regEmail">Email</label><input type="email" id="regEmail"
+                                placeholder="your@email.com" required></div>
+                        <div class="form-group"><label for="regPhone">Phone</label><input type="tel" id="regPhone"
+                                placeholder="+66 XX XXX XXXX"></div>
+                        <div class="form-group"><label for="regPassword">Password</label><input type="password"
+                                id="regPassword" placeholder="Min 6 characters" required></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+                        <p class="profile-msg" id="registerMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-profile">
+                    <form class="profile-form" id="profileEditForm">
+                        <div class="form-group"><label for="profileName">Name</label><input type="text" id="profileName"
+                                required></div>
+                        <div class="form-group"><label for="profileEmail">Email</label><input type="email"
+                                id="profileEmail" required></div>
+                        <div class="form-group"><label for="profilePhone">Phone</label><input type="tel"
+                                id="profilePhone"></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Save Changes</button>
+                        <p class="profile-msg" id="profileMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-addresses">
+                    <div class="address-list" id="addressList"></div>
+                    <form class="add-address-form" id="addAddressForm">
+                        <h4 style="margin-bottom:10px; font-size:0.9rem;">Add New Address</h4>
+                        <div class="form-row">
+                            <select id="newAddrLabel">
+                                <option value="Home">Home</option>
+                                <option value="Work">Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <input type="text" id="newAddrText" placeholder="Full address" required>
+                        </div>
+                        <div class="add-address-row">
+                            <label><input type="checkbox" id="newAddrDefault"> Set as default</label>
+                            <button type="submit" class="btn btn-primary"
+                                style="margin-left:auto; padding:6px 16px; font-size:0.82rem;">Add</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-reservations">
+                    <div class="reservation-list" id="myReservationsList"></div>
+                </div>
+                <div class="profile-pane" id="pane-orders">
+                    <div class="reservation-list" id="myOrdersList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

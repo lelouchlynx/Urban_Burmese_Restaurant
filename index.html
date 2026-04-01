@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Urban Burmese RESTAURANT</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.png" alt="Urban Burmese" class="nav-logo-img"> Urban Burmese Restaurant
+            </a>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="pages/about.html">About</a></li>
+                <li><a href="pages/menu.html">Menu</a></li>
+                <li><a href="pages/services.html">Services</a></li>
+                <li><a href="pages/contact.html">Contact</a></li>
+                <li><a href="pages/services.html#reserve" class="nav-reserve-btn">Reserve a Table</a></li>
+                <li><button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀️</button></li>
+                <li><span id="navAuthArea"><button class="nav-profile-btn" id="navProfileBtn"
+                            aria-label="Account">👤</button></span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="page-header" style="padding-top: 180px;">
+        <div class="container">
+            <span class="section-tag"
+                style="color:var(--gold-500); letter-spacing:3px; text-transform:uppercase; font-size:0.9rem;">Authentic
+                Cuisine</span>
+            <img src="images/logo.png" alt="Urban Burmese Logo" class="hero-logo">
+            <h1 class="page-title" style="font-size: 4rem; margin-top:20px; color: var(--gold-500);">Urban Burmese
+                Restaurant</h1>
+            <p class="page-subtitle" style="font-size: 1.2rem; margin-bottom: 20px;">
+                Experience the taste of Myanmar right here.
+            </p>
+            <div id="dateTimeDisplay" class="datetime-display"></div>
+            <a href="pages/menu.html" class="btn btn-primary" style="margin-top: 24px;">View Our Menu</a>
+        </div>
+    </header>
+
+    <!-- SCROLL STORYTELLING — SIGNATURE DISHES -->
+    <section id="dishStory" class="section dish-story-scrolly" aria-label="Signature dish stories">
+        <div class="container">
+            <div class="dish-story-intro">
+                <span class="dish-story-kicker">Signature Stories</span>
+                <h2 class="dish-story-title">From Eseence to Elegance On Your Plate</h2>
+                <p class="dish-story-subtitle">
+                    Scroll to follow each Burmese dish from raw ingredients to its plated moment.
+                </p>
+            </div>
+
+            <div class="dish-story-track">
+                <!-- Dish 1: Mohinga -->
+                <article class="dish-scene" data-stage="0">
+                    <div class="dish-sticky">
+                        <div class="dish-visual">
+                            <img class="dish-photo dish-photo--ingredients"
+                                src="images/Mohinga Ingredient Stage.png"
+                                alt="Mohinga ingredients" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--cooking"
+                                src="images/Mohinga Cooking Stage.png"
+                                alt="Mohinga simmering in the pot" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--final" src="images/Mohinga.jpg"
+                                alt="Plated Mohinga with toppings" loading="lazy" decoding="async">
+                            <div class="dish-glow" aria-hidden="true"></div>
+                            <div class="dish-grain" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="dish-panel">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Mohinga</h3>
+                                <p class="dish-desc">Myanmar’s national fish noodle soup, rich with lemongrass and crisp
+                                    toppings.</p>
+                            </div>
+                            <ol class="dish-stages" aria-label="Mohinga story stages">
+                                <li class="dish-stage" data-step="0">
+                                    <span class="dish-stage-tag">Ingredients</span>
+                                    <p class="dish-stage-text">Fresh aromatics and fish form the base for a deep, savory
+                                        broth.</p>
+                                </li>
+                                <li class="dish-stage" data-step="1">
+                                    <span class="dish-stage-tag">Cooking</span>
+                                    <p class="dish-stage-text">The broth slowly simmers until every note is balanced and
+                                        fragrant.</p>
+                                </li>
+                                <li class="dish-stage" data-step="2">
+                                    <span class="dish-stage-tag">Final reveal</span>
+                                    <p class="dish-stage-text">Ladled over rice noodles and finished with lime and crisp
+                                        fritters.</p>
+                                </li>
+                            </ol>
+                            <div class="dish-progress" aria-hidden="true">
+                                <span class="dish-progress-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-spacer" aria-hidden="true"></div>
+                </article>
+
+                <!-- Dish 2: Laphet Thote -->
+                <article class="dish-scene" data-stage="0">
+                    <div class="dish-sticky">
+                        <div class="dish-visual">
+                            <img class="dish-photo dish-photo--ingredients"
+                                src="images/Laphak Thote Ingredient Stage.png"
+                                alt="Laphet Thote ingredients" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--cooking"
+                                src="images/Laphak Thote Cooking Stage.png"
+                                alt="Laphet Thote being mixed" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--final" src="images/laphet thoke.png"
+                                alt="Plated Laphet Thote tea leaf salad" loading="lazy" decoding="async">
+                            <div class="dish-glow" aria-hidden="true"></div>
+                            <div class="dish-grain" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="dish-panel">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Laphet Thote</h3>
+                                <p class="dish-desc">Iconic tea leaf salad with crunchy nuts, seeds, and bright lime.</p>
+                            </div>
+                            <ol class="dish-stages" aria-label="Laphet Thote story stages">
+                                <li class="dish-stage" data-step="0">
+                                    <span class="dish-stage-tag">Ingredients</span>
+                                    <p class="dish-stage-text">Fermented tea leaves, toasted nuts, sesame, and fresh
+                                        greens.</p>
+                                </li>
+                                <li class="dish-stage" data-step="1">
+                                    <span class="dish-stage-tag">Cooking</span>
+                                    <p class="dish-stage-text">Everything is gently tossed so every bite stays crisp and
+                                        bright.</p>
+                                </li>
+                                <li class="dish-stage" data-step="2">
+                                    <span class="dish-stage-tag">Final reveal</span>
+                                    <p class="dish-stage-text">A bold, crunchy salad that’s sour, savory, and addictive.
+                                    </p>
+                                </li>
+                            </ol>
+                            <div class="dish-progress" aria-hidden="true">
+                                <span class="dish-progress-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-spacer" aria-hidden="true"></div>
+                </article>
+
+                <!-- Dish 3: Dan Pauk -->
+                <article class="dish-scene" data-stage="0">
+                    <div class="dish-sticky">
+                        <div class="dish-visual">
+                            <img class="dish-photo dish-photo--ingredients"
+                                src="images/Dan Pauk Ingredient Stage.png"
+                                alt="Dan Pauk ingredients" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--cooking" src="images/Dan Pauk Cooking Stage.png"
+                                alt="Dan Pauk cooking process" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--final" src="images/Dan pouk.jpg"
+                                alt="Plated Dan Pauk biryani" loading="lazy" decoding="async">
+                            <div class="dish-glow" aria-hidden="true"></div>
+                            <div class="dish-grain" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="dish-panel">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Dan Pauk</h3>
+                                <p class="dish-desc">Burmese-style biryani with saffron rice and tender chicken.</p>
+                            </div>
+                            <ol class="dish-stages" aria-label="Dan Pauk story stages">
+                                <li class="dish-stage" data-step="0">
+                                    <span class="dish-stage-tag">Ingredients</span>
+                                    <p class="dish-stage-text">Fragrant rice, warm spices, and marinated chicken.</p>
+                                </li>
+                                <li class="dish-stage" data-step="1">
+                                    <span class="dish-stage-tag">Cooking</span>
+                                    <p class="dish-stage-text">Layered and steamed so every grain drinks in the flavor.
+                                    </p>
+                                </li>
+                                <li class="dish-stage" data-step="2">
+                                    <span class="dish-stage-tag">Final reveal</span>
+                                    <p class="dish-stage-text">Golden, aromatic rice served as a celebratory centerpiece.
+                                    </p>
+                                </li>
+                            </ol>
+                            <div class="dish-progress" aria-hidden="true">
+                                <span class="dish-progress-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-spacer" aria-hidden="true"></div>
+                </article>
+
+                <!-- Dish 4: Ohn No Khao Swe -->
+                <article class="dish-scene" data-stage="0">
+                    <div class="dish-sticky">
+                        <div class="dish-visual">
+                            <img class="dish-photo dish-photo--ingredients"
+                                src="images/Ohn No Khao Swe Ingredient Stage.png"
+                                alt="Ohn No Khao Swe ingredients" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--cooking"
+                                src="images/Ohn No Khao Swe Cooking Stage.png"
+                                alt="Ohn No Khao Swe simmering" loading="lazy" decoding="async">
+                            <img class="dish-photo dish-photo--final" src="images/oan noh.jpg"
+                                alt="Plated Ohn No Khao Swe coconut noodle soup" loading="lazy" decoding="async">
+                            <div class="dish-glow" aria-hidden="true"></div>
+                            <div class="dish-grain" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="dish-panel">
+                            <div class="dish-header">
+                                <h3 class="dish-name">Ohn No Khao Swe</h3>
+                                <p class="dish-desc">Creamy coconut noodle soup with a golden, silky broth.</p>
+                            </div>
+                            <ol class="dish-stages" aria-label="Ohn No Khao Swe story stages">
+                                <li class="dish-stage" data-step="0">
+                                    <span class="dish-stage-tag">Ingredients</span>
+                                    <p class="dish-stage-text">Coconut milk, noodles, aromatics, and gentle spice.</p>
+                                </li>
+                                <li class="dish-stage" data-step="1">
+                                    <span class="dish-stage-tag">Cooking</span>
+                                    <p class="dish-stage-text">A slow simmer turns the broth velvety and aromatic.</p>
+                                </li>
+                                <li class="dish-stage" data-step="2">
+                                    <span class="dish-stage-tag">Final reveal</span>
+                                    <p class="dish-stage-text">Finished with crisp toppings for the perfect spoonful.</p>
+                                </li>
+                            </ol>
+                            <div class="dish-progress" aria-hidden="true">
+                                <span class="dish-progress-bar"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dish-spacer" aria-hidden="true"></div>
+                </article>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2026 Urban Burmese Restaurant. Project by The Urban.</p>
+        </div>
+    </footer>
+
+    <!-- PROFILE MODAL -->
+    <div class="ubr-modal-overlay" id="profileModalOverlay">
+        <div class="ubr-modal" id="profileModal">
+            <button class="ubr-modal-close">✕</button>
+            <div class="ubr-modal-header">
+                <h2>My Account</h2>
+            </div>
+            <div class="ubr-modal-body">
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="login">Login</button>
+                    <button class="profile-tab" data-tab="register">Register</button>
+                    <button class="profile-tab" data-tab="profile" style="display:none;">My Profile</button>
+                    <button class="profile-tab" data-tab="addresses" style="display:none;">📍 Addresses</button>
+                    <button class="profile-tab" data-tab="reservations" style="display:none;">🪑 Reservations</button>
+                    <button class="profile-tab" data-tab="orders" style="display:none;">🛒 Orders</button>
+                </div>
+
+                <!-- Login Pane -->
+                <div class="profile-pane active" id="pane-login">
+                    <form class="profile-form" id="loginForm">
+                        <div class="form-group">
+                            <label for="loginEmail">Email</label>
+                            <input type="email" id="loginEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="••••••" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+                        <p class="profile-msg" id="loginMsg"></p>
+                    </form>
+                </div>
+
+                <!-- Register Pane -->
+                <div class="profile-pane" id="pane-register">
+                    <form class="profile-form" id="registerForm">
+                        <div class="form-group">
+                            <label for="regName">Full Name</label>
+                            <input type="text" id="regName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regEmail">Email</label>
+                            <input type="email" id="regEmail" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regPhone">Phone</label>
+                            <input type="tel" id="regPhone" placeholder="+66 XX XXX XXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="regPassword">Password</label>
+                            <input type="password" id="regPassword" placeholder="Min 6 characters" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+                        <p class="profile-msg" id="registerMsg"></p>
+                    </form>
+                </div>
+
+                <!-- Profile Edit Pane -->
+                <div class="profile-pane" id="pane-profile">
+                    <form class="profile-form" id="profileEditForm">
+                        <div class="form-group">
+                            <label for="profileName">Name</label>
+                            <input type="text" id="profileName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profileEmail">Email</label>
+                            <input type="email" id="profileEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="profilePhone">Phone</label>
+                            <input type="tel" id="profilePhone">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Save Changes</button>
+                        <p class="profile-msg" id="profileMsg"></p>
+                    </form>
+                </div>
+
+                <!-- Addresses Pane -->
+                <div class="profile-pane" id="pane-addresses">
+                    <div class="address-list" id="addressList"></div>
+                    <form class="add-address-form" id="addAddressForm">
+                        <h4 style="margin-bottom:10px; font-size:0.9rem;">Add New Address</h4>
+                        <div class="form-row">
+                            <select id="newAddrLabel">
+                                <option value="Home">Home</option>
+                                <option value="Work">Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <input type="text" id="newAddrText" placeholder="Full address" required>
+                        </div>
+                        <div class="add-address-row">
+                            <label><input type="checkbox" id="newAddrDefault"> Set as default</label>
+                            <button type="submit" class="btn btn-primary"
+                                style="margin-left:auto; padding:6px 16px; font-size:0.82rem;">Add</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Reservations Pane -->
+                <div class="profile-pane" id="pane-reservations">
+                    <div class="reservation-list" id="myReservationsList"></div>
+                </div>
+
+                <!-- Orders Pane -->
+                <div class="profile-pane" id="pane-orders">
+                    <div class="reservation-list" id="myOrdersList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

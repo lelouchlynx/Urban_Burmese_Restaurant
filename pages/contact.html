@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Urban Burmese RESTAURANT</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="nav-logo">
+                <img src="../images/logo.png" alt="Urban Burmese" class="nav-logo-img"> Urban Burmese Restaurant
+            </a>
+            <button class="nav-toggle" id="navToggle"><span></span><span></span><span></span></button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="services.html#reserve" class="nav-reserve-btn">Reserve a Table</a></li>
+                <li><button class="theme-toggle" id="themeToggle">☀️</button></li>
+                <li><span id="navAuthArea"><button class="nav-profile-btn" id="navProfileBtn"
+                            aria-label="Account">👤</button></span></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1 class="page-title">Get in Touch</h1>
+            <p class="page-subtitle">Planning an event or have a question? Fill out the form below and we'll get back to
+                you.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="John Doe">
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com">
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="+66 XX XXX XXXX">
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventType">What is the Event?</label>
+                        <select id="eventType">
+                            <option value="">— Select Event Type —</option>
+                            <option value="birthday">Birthday Party</option>
+                            <option value="wedding">Wedding Reception</option>
+                            <option value="corporate">Corporate Event</option>
+                            <option value="private">Private Dining</option>
+                            <option value="catering">Catering Service</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventDate">Event Date</label>
+                        <input type="date" id="eventDate">
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="guests">Number of Guests</label>
+                        <input type="number" id="guests" placeholder="e.g. 50" min="1">
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Additional Details</label>
+                        <textarea id="message" rows="5"
+                            placeholder="Tell us more about your event — dietary requirements, special requests, budget, etc."></textarea>
+                        <small class="error-msg">Error message</small>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
+                    <p class="success-msg" id="formSuccess"></p>
+                </form>
+            </div>
+
+            <div class="text-center" style="margin-top: 60px;">
+                <h3 style="margin-bottom:16px;">Visit Us</h3>
+                <p>38 Phet Kasem Rd, Bang Wa, Phasi Charoen, Bangkok 10160</p>
+                <p style="margin-top:8px;">Call: +66 2 123 4567</p>
+                <p style="margin-top:8px;">Email: info@urbanburmese.com</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Urban Burmese Restaurant. Project by The Urban.</p>
+        </div>
+    </footer>
+
+    <!-- PROFILE MODAL -->
+    <div class="ubr-modal-overlay" id="profileModalOverlay">
+        <div class="ubr-modal" id="profileModal">
+            <button class="ubr-modal-close">✕</button>
+            <div class="ubr-modal-header">
+                <h2>My Account</h2>
+            </div>
+            <div class="ubr-modal-body">
+                <div class="profile-tabs">
+                    <button class="profile-tab active" data-tab="login">Login</button>
+                    <button class="profile-tab" data-tab="register">Register</button>
+                    <button class="profile-tab" data-tab="profile" style="display:none;">My Profile</button>
+                    <button class="profile-tab" data-tab="addresses" style="display:none;">📍 Addresses</button>
+                    <button class="profile-tab" data-tab="reservations" style="display:none;">🪑 Reservations</button>
+                    <button class="profile-tab" data-tab="orders" style="display:none;">🛒 Orders</button>
+                </div>
+                <div class="profile-pane active" id="pane-login">
+                    <form class="profile-form" id="loginForm">
+                        <div class="form-group"><label for="loginEmail">Email</label><input type="email" id="loginEmail"
+                                placeholder="your@email.com" required></div>
+                        <div class="form-group"><label for="loginPassword">Password</label><input type="password"
+                                id="loginPassword" placeholder="••••••" required></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Login</button>
+                        <p class="profile-msg" id="loginMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-register">
+                    <form class="profile-form" id="registerForm">
+                        <div class="form-group"><label for="regName">Full Name</label><input type="text" id="regName"
+                                placeholder="John Doe" required></div>
+                        <div class="form-group"><label for="regEmail">Email</label><input type="email" id="regEmail"
+                                placeholder="your@email.com" required></div>
+                        <div class="form-group"><label for="regPhone">Phone</label><input type="tel" id="regPhone"
+                                placeholder="+66 XX XXX XXXX"></div>
+                        <div class="form-group"><label for="regPassword">Password</label><input type="password"
+                                id="regPassword" placeholder="Min 6 characters" required></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Create Account</button>
+                        <p class="profile-msg" id="registerMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-profile">
+                    <form class="profile-form" id="profileEditForm">
+                        <div class="form-group"><label for="profileName">Name</label><input type="text" id="profileName"
+                                required></div>
+                        <div class="form-group"><label for="profileEmail">Email</label><input type="email"
+                                id="profileEmail" required></div>
+                        <div class="form-group"><label for="profilePhone">Phone</label><input type="tel"
+                                id="profilePhone"></div>
+                        <button type="submit" class="btn btn-primary" style="width:100%;">Save Changes</button>
+                        <p class="profile-msg" id="profileMsg"></p>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-addresses">
+                    <div class="address-list" id="addressList"></div>
+                    <form class="add-address-form" id="addAddressForm">
+                        <h4 style="margin-bottom:10px; font-size:0.9rem;">Add New Address</h4>
+                        <div class="form-row">
+                            <select id="newAddrLabel">
+                                <option value="Home">Home</option>
+                                <option value="Work">Work</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <input type="text" id="newAddrText" placeholder="Full address" required>
+                        </div>
+                        <div class="add-address-row">
+                            <label><input type="checkbox" id="newAddrDefault"> Set as default</label>
+                            <button type="submit" class="btn btn-primary"
+                                style="margin-left:auto; padding:6px 16px; font-size:0.82rem;">Add</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="profile-pane" id="pane-reservations">
+                    <div class="reservation-list" id="myReservationsList"></div>
+                </div>
+                <div class="profile-pane" id="pane-orders">
+                    <div class="reservation-list" id="myOrdersList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
