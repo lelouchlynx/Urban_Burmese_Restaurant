@@ -1,5 +1,5 @@
 # Urban Burmese Restaurant
-
+https://lelouchlynx.github.io/Urban_Burmese_Restaurant/
 A full-stack restaurant web app built with PHP, MySQL, and vanilla JavaScript. 
 
 I built this to handle standard restaurant site features like user authentication, table reservations, and food ordering. The frontend is pretty clean and includes some custom scroll-driven animations for the menu items, plus a built-in dark/light mode toggle.
